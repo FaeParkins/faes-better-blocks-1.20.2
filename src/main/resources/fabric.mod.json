@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "faes-better-blocks",
+	"version": "${version}",
+	"name": "Fae's Better Blocks",
+	"description": "A small mod that changes and adds blocks I feel work better/make sense for minecraft",
+	"authors": [
+		"Fae"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/faes-better-blocks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fae.faesbetterblocks.FaesBetterBlocks"
+		],
+		"client": [
+			"fae.faesbetterblocks.FaesBetterBlocksClient"
+		],
+		"fabric-datagen": [
+			"fae.faesbetterblocks.FaesBetterBlocksDataGenerator"
+		]
+	},
+	"mixins": [
+		"faes-better-blocks.mixins.json",
+		{
+			"config": "faes-better-blocks.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
